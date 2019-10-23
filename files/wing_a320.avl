@@ -1,0 +1,36 @@
+A320 like Wing
+#Mach
+ 0.0    
+#IYsym   IZsym   Zsym
+ 0       0       0.0
+#Sref    Cref    Bref
+131.25   3.75    35.0
+#Xref    Yref    Zref
+1.5      0.0     0.0
+#CDp
+0.0
+#
+#====================================================================
+SURFACE 
+Wing 
+#Nchordwise  Cspace   Nspanwise   Sspace
+8            1.0       16         1.0
+#
+YDUPLICATE
+0.0
+#
+ANGLE
+0.0
+#-------------------------------------------------------------
+SECTION
+#Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
+0.      0.     0.      6.0     0.0   0          0
+
+
+#-------------------------------------------------------------
+SECTION
+#Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
+9.28    17.43    1.52   1.5    0.0   0          0
+
+
+
