@@ -1,0 +1,10 @@
+version: '3'
+services:
+    aca:
+        build:
+            context: ./aca-docker
+        ports:
+            - 80:80
+        volumes:
+            - ./files/:/home
+        tty: true
