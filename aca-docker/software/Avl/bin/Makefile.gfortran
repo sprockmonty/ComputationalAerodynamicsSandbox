@@ -4,7 +4,7 @@
 #
 
 #BINDIR = .
-BINDIR = /home/codes/bin/
+BINDIR = /usr/bin/
 INSTALLCMD = install -s
 
 SRC = ../src
