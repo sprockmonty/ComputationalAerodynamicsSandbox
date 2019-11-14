@@ -1,0 +1,11 @@
+# RAE Wing 'A'
+# Re = 1 * 10^6, Ma = 0.4, alpha = 2.0
+# local normal force coefficients over the span
+# y/s | C_N
+0.167 0.138
+0.250 0.162
+0.400 0.172
+0.600 0.186
+0.750 0.191
+0.850 0.183
+0.925 0.165

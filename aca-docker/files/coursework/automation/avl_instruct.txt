@@ -1,0 +1,8 @@
+load tempFiles/tempAVLWing.txt
+oper
+a
+a 2
+x
+s
+tempFiles/result.dmp
+y
