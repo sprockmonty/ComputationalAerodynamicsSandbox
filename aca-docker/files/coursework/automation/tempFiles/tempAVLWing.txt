@@ -14,7 +14,7 @@ Initial Wing
 SURFACE 
 Wing 
 #Nchordwise  Cspace   Nspanwise   Sspace
-15            1.0       30          -2.0
+5            1.0       50          -2.0
 #
 YDUPLICATE
 0.0

@@ -18,3 +18,11 @@ convergeOnRatio(){
 }
 
 convergeOnRatio 2 24 "ratio2.txt"
+convergeOnRatio 3 18 "ratio3.txt"
+convergeOnRatio 4 13 "ratio4.txt"
+convergeOnRatio 5 9 "ratio5.txt"
+convergeOnRatio 6 7 "ratio6.txt"
+convergeOnRatio 7 10 "ratio7.txt"
+convergeOnRatio 8 5 "ratio8.txt"
+convergeOnRatio 9 8 "ratio9.txt"
+convergeOnRatio 10 5 "ratio10.txt"

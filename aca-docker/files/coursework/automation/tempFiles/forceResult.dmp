@@ -3,8 +3,8 @@
 
  Configuration: Initial Wing                                                
      # Surfaces =   2
-     # Strips   =  56
-     # Vortices = 784
+     # Strips   = 100
+     # Vortices = 500
 
   Sref = 0.13940       Cref = 0.15240       Bref = 0.91440    
   Xref = 0.75000       Yref =  0.0000       Zref =  0.0000    
@@ -17,15 +17,15 @@
   Beta  =   0.00000     qc/2V =   0.00000
   Mach  =     0.000     rb/2V =  -0.00000     r'b/2V =  -0.00000
 
-  CXtot =  -0.00570     Cltot =  -0.00000     Cl'tot =  -0.00000
-  CYtot =   0.00000     Cmtot =   0.51633
-  CZtot =  -0.14036     Cntot =  -0.00000     Cn'tot =   0.00000
+  CXtot =  -0.00566     Cltot =  -0.00000     Cl'tot =  -0.00000
+  CYtot =   0.00000     Cmtot =   0.51571
+  CZtot =  -0.14020     Cntot =  -0.00000     Cn'tot =   0.00000
 
-  CLtot =   0.14008
-  CDtot =   0.01060
-  CDvis =   0.00959     CDind = 0.0010121
-  CLff  =   0.14011     CDff  = 0.0010508    | Trefftz
-  CYff  =   0.00000         e =    0.9915    | Plane  
+  CLtot =   0.13992
+  CDtot =   0.01054
+  CDvis =   0.00959     CDind = 0.0009569
+  CLff  =   0.13995     CDff  = 0.0010482    | Trefftz
+  CYff  =   0.00000         e =    0.9916    | Plane  
 
 
  ---------------------------------------------------------------
