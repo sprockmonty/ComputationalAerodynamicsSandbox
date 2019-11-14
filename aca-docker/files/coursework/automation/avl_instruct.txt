@@ -6,3 +6,7 @@ x
 s
 tempFiles/result.dmp
 y
+w
+tempFiles/forceResult.dmp
+y
+
