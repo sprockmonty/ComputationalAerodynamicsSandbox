@@ -33,9 +33,8 @@ legend("\delta", "\theta");
 load("experimental.mat")
 %alfa cl cd
 figure
-hold on
 plot(HighRePol{:,1}, HighRePol{:,2} ,'-k','LineWidth',1)
-plot(Experimental(:,1), Experimental(:,2) ,'-r','LineWidth',1)
+plot(Experimental(:,1), HighRePol{:,2} ,'-r','LineWidth',1)
 set(gca,'fontsize',18)
 grid on;
 xlabel("\alpha (\circ)")
@@ -49,9 +48,7 @@ polyfit(alfa(1:237),cl(1:237),1)
 
 
 figure
-hold on
 plot(HighRePol{:,3}, HighRePol{:,2} ,'-k','LineWidth',1)
-plot(Experimental(:,3), Experimental(:,2) ,'-r','LineWidth',1)
 set(gca,'fontsize',18)
 grid on;
 xlabel("C_D")
@@ -59,9 +56,7 @@ ylabel("C_L")
 legend("XFoil Data", "Experimental Data");
 
 figure
-hold on
 plot(HighRePol{:,1}, HighRePol{:,2} ./  HighRePol{:,3},'-k','LineWidth',1)
-plot(Experimental(:,1), Experimental(:,2) ./  Experimental(:,3) ,'-r','LineWidth',1)
 set(gca,'fontsize',18)
 grid on;
 ylabel("L/D")
