@@ -1,7 +1,7 @@
-load tempFiles/tempAVLWing.txt
+load RAE_wingAWingAutomate_ldmax.txt
 oper
 a
-a 2
+a 8.00
 m
 mn 0.4
 

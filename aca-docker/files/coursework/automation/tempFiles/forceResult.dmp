@@ -1,31 +1,31 @@
  ---------------------------------------------------------------
  Vortex Lattice Output -- Total Forces
 
- Configuration: Initial Wing                                                
+ Configuration: RAE Wing                                                    
      # Surfaces =   2
-     # Strips   = 100
-     # Vortices = 500
+     # Strips   =  72
+     # Vortices = 432
 
-  Sref = 0.13940       Cref = 0.15240       Bref = 0.91440    
-  Xref = 0.75000       Yref =  0.0000       Zref =  0.0000    
+  Sref = 0.13935E+06   Cref =  152.40       Bref =  914.40    
+  Xref =  1.5000       Yref =  0.0000       Zref =  0.0000    
 
  Standard axis orientation,  X fwd, Z down         
 
  Run case:  -unnamed-                              
 
-  Alpha =   2.00000     pb/2V =  -0.00000     p'b/2V =  -0.00000
+  Alpha =   8.00000     pb/2V =  -0.00000     p'b/2V =  -0.00000
   Beta  =   0.00000     qc/2V =   0.00000
-  Mach  =     0.000     rb/2V =  -0.00000     r'b/2V =  -0.00000
+  Mach  =     0.400     rb/2V =  -0.00000     r'b/2V =  -0.00000
 
-  CXtot =  -0.00566     Cltot =  -0.00000     Cl'tot =  -0.00000
-  CYtot =   0.00000     Cmtot =   0.51571
-  CZtot =  -0.14020     Cntot =  -0.00000     Cn'tot =   0.00000
+  CXtot =   0.01755     Cltot =  -0.00000     Cl'tot =  -0.00000
+  CYtot =  -0.00000     Cmtot =  -0.74763
+  CZtot =  -0.61032     Cntot =   0.00000     Cn'tot =   0.00000
 
-  CLtot =   0.13992
-  CDtot =   0.01054
-  CDvis =   0.00959     CDind = 0.0009569
-  CLff  =   0.13995     CDff  = 0.0010482    | Trefftz
-  CYff  =   0.00000         e =    0.9916    | Plane  
+  CLtot =   0.60683
+  CDtot =   0.06756
+  CDvis =   0.04391     CDind = 0.0236451
+  CLff  =   0.61015     CDff  = 0.0199095    | Trefftz
+  CYff  =   0.00000         e =    0.9920    | Plane  
 
 
  ---------------------------------------------------------------

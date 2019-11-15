@@ -1,12 +1,12 @@
-Initial Wing
+RAE Wing
 #Mach
  0.4    
 #IYsym   IZsym   Zsym
  0       0       0.0
 #Sref    Cref    Bref
-0.1394   0.1524  0.9144
+139354.56   152.4    914.4
 #Xref    Yref    Zref
-0.75    0.0     0.0
+1.5      0.0     0.0
 #CDp
 0.0
 #
@@ -14,7 +14,7 @@ Initial Wing
 SURFACE 
 Wing 
 #Nchordwise  Cspace   Nspanwise   Sspace
-chordToChange            1.0       spanToChange          -2.0
+chordToChange           1.0       spanToChange         1.0
 #
 YDUPLICATE
 0.0
@@ -24,20 +24,23 @@ ANGLE
 #-------------------------------------------------------------
 SECTION
 #Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
-0.      0.     0.      0.2286  0.0   0          0
-
+0.      0.     0.      228.60     0.0   0          0
+AFILE
+RAE101_airfoil.dat
+CLAF
+1.0693
 CDCL
-#CL1    CD1    CL2    CD2    CL3    CD3
--0.4517    0.01012  0.0    0.009660 0.4517    0.01012
-
+#CL1	CD1	CL2	CD2	CL3	CD3
+0.4659	0.01017	0	0.00967	-0.4658	0.01017
 #-------------------------------------------------------------
 SECTION
 #Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
-0.3402  0.4572 0.0    0.0726  0.0   0          0
-
-CDCL
-#CL1    CD1    CL2    CD2    CL3    CD3
--0.4517    0.01012  0.0    0.009660 0.4517    0.01012
-
+340.166129    457.20    0.00   76.20    0.0   0          0
+AFILE
+RAE101_airfoil.dat
 CLAF
 1.0693
+CDCL
+#CL1	CD1	CL2	CD2	CL3	CD3
+0.4659	0.01017	0	0.00967	-0.4658	0.01017
+
