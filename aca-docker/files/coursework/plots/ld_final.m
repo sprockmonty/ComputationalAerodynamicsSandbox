@@ -21,3 +21,5 @@ set(gca,'fontsize',18)
 hold off
 [m, i] = max(ld(:,1));
 [a(i,1), m]
+xlabel("\alpha (\circ)")
+ylabel("L/D")
