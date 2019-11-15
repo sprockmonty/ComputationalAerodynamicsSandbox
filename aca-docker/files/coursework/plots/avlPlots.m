@@ -33,3 +33,6 @@ legend("Ratio: 2", "Ratio: 4", "Ratio: 6", "Ratio: 8", "Ratio: 10");
 set(gca,'fontsize',18)
 grid on;
 
+
+
+
