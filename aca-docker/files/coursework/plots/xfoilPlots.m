@@ -9,7 +9,7 @@ set(gca,'fontsize',18)
 grid on;
 xlabel("x/c")
 ylabel("-C_p")
-legend("Invicid Study", "Viscous Study");
+legend("Inviscid Study", "Viscous Study");
 
 figure
 plot(vicidLowReCf{:,1}, vicidLowReCf{:,2} ,'-k','LineWidth',1)
@@ -27,7 +27,7 @@ plot(xc(1:141), vicidLowReDTheta{:,2} ,'-r','LineWidth',1)
 set(gca,'fontsize',18)
 grid on;
 xlabel("x/c")
-ylabel("\theta, \delta")
+ylabel("\delta, \theta")
 legend("\delta", "\theta");
 
 load("experimental.mat")
@@ -46,7 +46,7 @@ legend("XFoil Data", "Experimental Data");
 cl = HighRePol{:,2};
 alfa = HighRePol{:,1};
 polyfit(alfa(1:237),cl(1:237),1)
-
+polyfit(Experimental(1:14,1),Experimental(1:14,2),1)
 
 figure
 hold on
@@ -69,5 +69,10 @@ xlabel("\alpha (\circ)")
 legend("XFoil Data", "Experimental Data");
 %max ld
 max(HighRePol{:,2} ./  HighRePol{:,3})
+
+
+
+
+
 
 

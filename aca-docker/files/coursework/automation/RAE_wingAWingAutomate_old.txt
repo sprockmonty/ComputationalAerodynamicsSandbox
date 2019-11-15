@@ -6,7 +6,7 @@ Initial Wing
 #Sref    Cref    Bref
 0.1394   0.1524  0.9144
 #Xref    Yref    Zref
-0.75    0.0     0.0
+1.5    0.0     0.0
 #CDp
 0.0
 #
@@ -14,7 +14,7 @@ Initial Wing
 SURFACE 
 Wing 
 #Nchordwise  Cspace   Nspanwise   Sspace
-chordToChange            1.0       spanToChange          -2.0
+6           1.0       36         1.0
 #
 YDUPLICATE
 0.0
@@ -25,19 +25,19 @@ ANGLE
 SECTION
 #Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
 0.      0.     0.      0.2286  0.0   0          0
-
+CLAF
+1.069
 CDCL
 #CL1    CD1    CL2    CD2    CL3    CD3
--0.4517    0.01012  0.0    0.009660 0.4517    0.01012
+0.576	0.0117	 0	0.008	-0.576	0.0117
 
 #-------------------------------------------------------------
 SECTION
 #Xle    Yle    Zle     Chord   Ainc  Nspanwise  Sspace
 0.3402  0.4572 0.0    0.0726  0.0   0          0
-
+CLAF
+1.069
 CDCL
 #CL1    CD1    CL2    CD2    CL3    CD3
--0.4517    0.01012  0.0    0.009660 0.4517    0.01012
+0.576	0.0117	 0	0.008	-0.576	0.0117
 
-CLAF
-1.0693

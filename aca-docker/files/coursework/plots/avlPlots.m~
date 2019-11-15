@@ -1,0 +1,12 @@
+clear
+clc
+close all
+load("avl.mat")
+figure
+hold on
+
+%cl plot
+plot(ratio2{:,1}.*ratio2{:,2}, ratio2{:,3})
+xlabel("Mesh Size")
+ylabel("C_L")
+legend("Inviscid Study", "Viscous Study");
