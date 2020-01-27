@@ -15,21 +15,23 @@ import star.meshing.*;
 public class part1bAutoDomainChange extends StarMacro {
 
   public void execute() {
-    execute0(150.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd150.csv");
-    execute0(130.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd130.csv");
-    execute0(100.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd100.csv");
-    execute0(80.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd80.csv");
-    execute0(60.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd60.csv");
-    execute0(50.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd50.csv");
-    execute0(40.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd40.csv");
-    execute0(30.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd30.csv");
-    execute0(20.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd20.csv");
-    execute0(10.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd10.csv");
-    execute0(8.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd8.csv");
-    execute0(5.0,"\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\ClCd5.csv");
-  }
+    execute0(150.0,"ClCd150.csv", "Cp150.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(130.0,"ClCd130.csv", "Cp130.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(100.0,"ClCd100.csv", "Cp100.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(80.0,"ClCd80.csv", "Cp80.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(60.0,"ClCd60.csv", "Cp6.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(50.0,"ClCd50.csv", "Cp50.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(40.0,"ClCd40.csv", "Cp40.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(30.0,"ClCd30.csv", "Cp30.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(20.0,"ClCd20.csv", "Cp20.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(10.0,"ClCd10.csv", "Cp10.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(8.0,"ClCd8.csv", "Cp8.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(5.0,"ClCd5.csv", "Cp5.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+}
 
-  private void execute0(double width, String file) {
+  private void execute0(double width, String cdClFile, String cpFile, String relativePath) {
+    cdClFile = relativePath + cdClFile;
+    cpFile = relativePath + cpFile;
 
     Simulation simulation_0 = 
       getActiveSimulation();
@@ -140,6 +142,40 @@ public class part1bAutoDomainChange extends StarMacro {
 
     cartesian2DAxisManager_0.setAxesBounds(new Vector(Arrays.asList(new star.common.AxisManager.AxisBounds("Bottom Axis", 1.0, false, 1000.0, false), new star.common.AxisManager.AxisBounds("Left Axis", -0.05371483835076627, false, 3.050702382807832, false))));
 
-    monitorPlot_0.export(resolvePath(file), ",");
+    monitorPlot_0.export(resolvePath(cdClFile), ",");
+
+   XYPlot xYPlot_0 = 
+      ((XYPlot) simulation_0.getPlotManager().getPlot("Pressure coefficient"));
+
+    xYPlot_0.open();
+
+    PlotUpdate plotUpdate_0 = 
+      monitorPlot_0.getPlotUpdate();
+
+    HardcopyProperties hardcopyProperties_2 = 
+      plotUpdate_0.getHardcopyProperties();
+
+    hardcopyProperties_2.setCurrentResolutionWidth(1332);
+
+    hardcopyProperties_2.setCurrentResolutionHeight(619);
+
+    PlotUpdate plotUpdate_1 = 
+      xYPlot_0.getPlotUpdate();
+
+    HardcopyProperties hardcopyProperties_4 = 
+      plotUpdate_1.getHardcopyProperties();
+
+    hardcopyProperties_4.setCurrentResolutionWidth(1330);
+
+    hardcopyProperties_4.setCurrentResolutionHeight(618);
+
+    Cartesian2DAxisManager cartesian2DAxisManager_1 = 
+      ((Cartesian2DAxisManager) xYPlot_0.getAxisManager());
+
+    cartesian2DAxisManager_1.setAxesBounds(new Vector(Arrays.asList(new star.common.AxisManager.AxisBounds("Bottom Axis", 0.0013520000000000001, false, 0.9999962499999999, false), new star.common.AxisManager.AxisBounds("Left Axis", -3.0916403304136635, false, 1.0218322851068062, false))));
+
+    xYPlot_0.export(resolvePath(cpFile), ",");
+
+
   }
 }
