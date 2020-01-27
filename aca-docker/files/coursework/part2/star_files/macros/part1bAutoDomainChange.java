@@ -15,18 +15,10 @@ import star.meshing.*;
 public class part1bAutoDomainChange extends StarMacro {
 
   public void execute() {
-    execute0(150.0,"ClCd150.csv", "Cp150.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(130.0,"ClCd130.csv", "Cp130.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(100.0,"ClCd100.csv", "Cp100.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(80.0,"ClCd80.csv", "Cp80.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(60.0,"ClCd60.csv", "Cp60.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(50.0,"ClCd50.csv", "Cp50.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(40.0,"ClCd40.csv", "Cp40.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(30.0,"ClCd30.csv", "Cp30.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(20.0,"ClCd20.csv", "Cp20.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(10.0,"ClCd10.csv", "Cp10.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(8.0,"ClCd8.csv", "Cp8.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
-    execute0(5.0,"ClCd5.csv", "Cp5.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star files\\Macros\\Macro Data\\");
+    execute0(200.0,"ClCd200.csv", "Cp200.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
+    execute0(180.0,"ClCd180.csv", "Cp180.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
+    execute0(170.0,"ClCd170.csv", "Cp170.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
+    execute0(160.0,"ClCd160.csv", "Cp160.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
 }
 
   private void execute0(double width, String cdClFile, String cpFile, String relativePath) {
