@@ -16,22 +16,34 @@ end
 
 figure
 subplot(2,1,1);
-plot(radiVals,ClCd(:,1))
+plot(radiVals,ClCd(:,1), 'LineWidth',1.5, 'Color','k')
 title("C_D")
+xlabel("Domain Radius (m)")
+ylabel("C_D")
+grid on
 
 subplot(2,1,2);
-plot(radiVals,ClCdDiff(:,1))
+plot(radiVals,ClCdDiff(:,1), 'LineWidth',1.5, 'Color','k')
 title("C_D % difference")
-
+xlabel("Domain Radius (m)")
+ylabel("% Difference")
+grid on
+saveas(gcf,'plots/part2b_plots/CD_radi','epsc')
 
 
 figure
 subplot(2,1,1);
-plot(radiVals,ClCd(:,2))
+plot(radiVals,ClCd(:,2), 'LineWidth',1.5, 'Color','k')
 title("C_L")
+xlabel("Domain Radius (m)")
+ylabel("C_L")
+grid on
 
 subplot(2,1,2); 
-plot(radiVals,ClCdDiff(:,2))
-title("C_L % difference")
-
+plot(radiVals,ClCdDiff(:,2), 'LineWidth',1.5, 'Color','k')
+title("C_L % Difference")
+xlabel("Domain Radius (m)")
+ylabel("% Difference")
+grid on
+saveas(gcf,'plots/part2b_plots/CD_radi','epsc')
 
