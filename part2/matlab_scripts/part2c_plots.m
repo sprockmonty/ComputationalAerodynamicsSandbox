@@ -1,6 +1,7 @@
 clear
 clc
 close all
+load('../data/partc_data/expAndAvl.mat')
 cpViscX = readmatrix('../data/partc_data/Cp_visc_fine_04_x');
 cpViscZ = readmatrix('../data/partc_data/Cp_visc_fine_04_z');
 cpInviscX = readmatrix('../data/partc_data/Cp_invisc_fine_04_x');
@@ -8,10 +9,23 @@ cpInviscZ = readmatrix('../data/partc_data/Cp_invisc_fine_04_z');
 
 data = [cpViscX,cpInviscX,cpViscZ,cpInviscZ];
 
-plotNames = ["Cp Visc 0.4", "Cp Visc 0.925", "Cp Invisc 0.4", "Cp Invisc 0.925"];
-
+plotNames = ["AVL", "Experimental", "Viscous", "Invisid"];
+plotColours = ['kkrr'];
 figure
 hold on
+p = [];
+
+%Avl plot
+p = [p,plot(dcpAVL(:,1),dcpAVL(:,2),'--b','LineWidth',1.5,'MarkerIndices',1:5:length(dcpAVL(:,1)))];
+plot(dcpAVL(:,3),dcpAVL(:,4),'--b','LineWidth',1.5,'MarkerIndices',1:5:length(dcpAVL(:,3)))
+
+%Experimental plot
+cpExp04 = [cpExp04(:,1)*(dcpAVL(end,1)-dcpAVL(1,1)) + dcpAVL(1,1), abs(cpExp04(:,2)-cpExp04(:,3))];
+cpExp0925 = [cpExp0925(:,1)*(dcpAVL(end,3)-dcpAVL(1,3)) + dcpAVL(1,3), abs(cpExp0925(:,2)-cpExp0925(:,3))];
+
+p = [p,plot(cpExp04(:,1),cpExp04(:,2),'--','LineWidth',1.5,'Color','#D95319')];
+plot(cpExp0925(:,1),cpExp0925(:,2),'--','LineWidth',1.5,'Color','#D95319')
+
 for i = 1:4
     cpX = data(:,2*i-1:2*i);
     cpX(any(isnan(cpX),2),:) = [];
@@ -20,10 +34,16 @@ for i = 1:4
     
     [cpUpper, cpLower] = clasifyPoints(cpX,cpZ);
     [dcp, range] = sortAndSpline(cpUpper, cpLower);
-    plot(range, dcp)
+    if mod(i,2)
+        p = [p,plot(range, dcp,'x-','LineWidth',1.5,'Color',plotColours(i),'MarkerIndices',1:70:length(range))];
+    else
+        plot(range, dcp,'x-','LineWidth',1.5,'Color',plotColours(i),'MarkerIndices',1:70:length(range))
+    end
 end
-legend(plotNames)
-
+legend(p,plotNames)
+title("Difference in C_P for different datasets")
+ylabel("\Delta C_P")
+xlabel("Chordwise position (m)")
 
 function [cpUpper, cpLower] = clasifyPoints(cpX, cpZ)
     for i = 1:size(cpX,1)
