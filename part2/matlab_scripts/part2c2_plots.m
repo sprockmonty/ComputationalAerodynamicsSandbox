@@ -12,18 +12,23 @@ data = [cpViscX,cpInviscX,cpViscZ,cpInviscZ];
 plotNames = ["Experimental", "Viscous", "Invisid"];
 plotColours = ['kkrr'];
 figure
-img = imread('../data/partc_data/duck.PNG');
-image('CData',img,'XData',[0.13-.1 0.4-.09],'YData',[0.65+0.07 -1.05+0.07])
+%img = imread('../data/partc_data/duck.PNG');
+%image('CData',img,'XData',[0.13-.1 0.4-.09],'YData',[0.65+0.07 -1.05+0.07])
 hold on
-
+grid on
 p = [];
 
 %Experimental plot
 cpExp04(:,1) = cpExp04(:,1)*(dcpAVL(end,1)-dcpAVL(1,1)) + dcpAVL(1,1);
 cpExp0925(:,1) = cpExp0925(:,1)*(dcpAVL(end,3)-dcpAVL(1,3)) + dcpAVL(1,3);
 
+%top
 p = [p,plot(cpExp04(:,1),-cpExp04(:,2),'--','LineWidth',1.5,'Color','#D95319')];
 plot(cpExp0925(:,1),-cpExp0925(:,2),'--','LineWidth',1.5,'Color','#D95319')
+
+%bottom
+plot(cpExp04(:,1),-cpExp04(:,3),'--','LineWidth',1.5,'Color','#D95319')
+plot(cpExp0925(:,1),-cpExp0925(:,3),'--','LineWidth',1.5,'Color','#D95319')
 
 for i = 1:4
     cpX = data(:,2*i-1:2*i);
@@ -44,12 +49,13 @@ for i = 1:4
     end
 end
 legend(p,plotNames)
-title("Difference in C_P for different datasets")
-ylabel("\Delta C_P")
+title("Comparison of C_P between Star CCM and experimental data ")
+ylabel("- C_P")
 xlabel("Chordwise position (m)")
 xlim([0.13,0.41])
 set(gca,'FontSize',20)
-
+set(gcf,'Position',[0 0 1300 800])
+saveas(gcf,'plots/partc_plots/cp08','epsc')
 
 
 function [cpUpper, cpLower] = clasifyPoints(cpX, cpZ)

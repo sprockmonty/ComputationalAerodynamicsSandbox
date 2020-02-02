@@ -38,12 +38,14 @@ legend(residualNames)
 title("Residuals")
 xlabel("Iteration")
 ylabel("Residual")
+grid on
 saveas(gcf,'plots/part2d_plots/residuals4','epsc')
 
 figure
 ClCd4Conv = readmatrix(['../data/part1d_data/ClCd4.csv']);
 plot(ClCd4Conv(:,1),ClCd4Conv(:,2),'k','LineWidth',1.5)
 hold on
+grid on
 plot(ClCd4Conv(:,1),ClCd4Conv(:,3),'r','LineWidth',1.5)
 title("Coefficent Convergence")
 xlabel("Iteration")

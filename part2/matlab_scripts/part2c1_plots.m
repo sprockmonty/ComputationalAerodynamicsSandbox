@@ -13,6 +13,7 @@ plotNames = ["AVL", "Experimental", "Viscous", "Invisid"];
 plotColours = ['kkrr'];
 figure
 hold on
+grid on
 p = [];
 
 %Avl plot
@@ -46,6 +47,8 @@ ylabel("\Delta C_P")
 xlabel("Chordwise position (m)")
 xlim([0.13,0.41])
 set(gca,'FontSize',20)
+set(gcf,'Position',[0 0 1300 800])
+saveas(gcf,'plots/partc_plots/dcp','epsc')
 
 function [cpUpper, cpLower] = clasifyPoints(cpX, cpZ)
     for i = 1:size(cpX,1)
