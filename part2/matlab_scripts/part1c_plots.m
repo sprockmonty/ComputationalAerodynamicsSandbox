@@ -21,6 +21,7 @@ title("C_D")
 xlabel("Base Size (m)")
 ylabel("C_D")
 grid on
+xlim([0,0.04])
 
 subplot(2,1,2);
 plot(baseVals/10000,ClCdDiff(:,1), 'LineWidth',1.5, 'Color','k')
@@ -28,6 +29,7 @@ title("C_D % difference")
 xlabel("Base Size (m)")
 ylabel("% Difference")
 grid on
+xlim([0,0.04])
 saveas(gcf,'plots/part2c_plots/CD_base','epsc')
 
 figure
@@ -37,6 +39,7 @@ title("C_L")
 xlabel("Base Size (m)")
 ylabel("C_L")
 grid on
+xlim([0,0.04])
 
 subplot(2,1,2); 
 plot(baseVals/10000,ClCdDiff(:,2), 'LineWidth',1.5, 'Color','k')
@@ -44,28 +47,6 @@ title("C_L % Difference")
 xlabel("Base Size (m)")
 ylabel("% Difference")
 grid on
+xlim([0,0.04])
 saveas(gcf,'plots/part2c_plots/CL_base','epsc')
 
-% xfoil plots
-xfoilData = readmatrix('../data/part1c_data/AG16_polar.csv');
-xfoilAlpha = xfoilData(6:end,1);
-xfoilCl = xfoilData(6:end,2);
-xfoilCd = xfoilData(6:end,3);
-
-
-left_color = [1 0.2 0.2];
-right_color = [0 0 0];
-set(figure(6),'defaultAxesColorOrder',[left_color; right_color]);
-hold on
-grid on
-yyaxis left
-plot(xfoilAlpha,xfoilCl, '-r','LineWidth',1.5);
-ylabel('C_L');
-yyaxis right
-plot(xfoilAlpha,xfoilCd, '-k','LineWidth',1.5);
-ylabel('C_D');
-xlabel('Angle of Attack');
-xlim([0 10]);
-legend('C_L Xfoil','C_D Xfoil','Location','southeast');
-title('Coefficient plots for XFOIL viscous AG16 airfoil');
-saveas(gcf,'plots/part2c_plots/xfoil_ag16','epsc')
