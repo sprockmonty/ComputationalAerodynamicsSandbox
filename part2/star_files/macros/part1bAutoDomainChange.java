@@ -15,8 +15,13 @@ import star.meshing.*;
 public class part1bAutoDomainChange extends StarMacro {
 
   public void execute() {
-    execute0(40.0,"ClCd40.csv", "Cp40.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
 
+int radius = 0;
+
+	while(radius <= 200) {
+		radius +=10;
+		execute0((double)radius,"ClCd"+String.valueOf(radius)+".csv", "Cp"+String.valueOf(radius)+".csv","C:\\ComputationalAerodynamicsSandbox\\part2\\star_files\\macros\\macro_data\\");
+	}
 
   
   
