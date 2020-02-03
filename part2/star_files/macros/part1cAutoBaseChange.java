@@ -12,17 +12,13 @@ public class part1cAutoBaseChange extends StarMacro {
 
   public void execute() {
 
-    execute0(0.04,"ClCd400.csv", "Cp400.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.05,"ClCd500.csv", "Cp500.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.06,"ClCd600.csv", "Cp600.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.07,"ClCd700.csv", "Cp700.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.08,"ClCd800.csv", "Cp800.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.09,"ClCd900.csv", "Cp900.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-    execute0(0.1,"ClCd1000.csv", "Cp1000.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-execute0(0.0004,"ClCd4.csv", "Cp4.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-execute0(0.0003,"ClCd3.csv", "Cp3.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-execute0(0.0002,"ClCd2.csv", "Cp2.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
-execute0(0.0001,"ClCd1.csv", "Cp1.csv","\\\\icnas3.cc.ic.ac.uk\\nmd16\\ComputationalAerodynamicsSandbox\\aca-docker\\files\\coursework\\part2\\star_files\\macros\\macro_data\\");
+double base = 0.1;
+double baseString;
+	while(base <= 0.12) {
+		base +=0.005;
+		baseString = base*10000;
+		execute0(base,"ClCd"+String.valueOf((int)baseString)+".csv", "Cp"+String.valueOf((int)baseString)+".csv","C:\\ComputationalAerodynamicsSandbox\\part2\\star_files\\macros\\macro_data\\");
+	}
   }
 
   private void execute0(double base, String cdClFile, String cpFile, String relativePath) {

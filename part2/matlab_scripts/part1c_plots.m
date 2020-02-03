@@ -1,7 +1,7 @@
 clear
 clc
 close all
-baseVals = [4,5,10,20,30,40,50,60,70,80,90,100,150,200,300,400,500,600,700,800,900,1000];
+baseVals = [4,5,10,20,30,40,50,60,70,80,90,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200];
 ClCd = zeros(length(baseVals),2);
 Cp = cell(length(baseVals),1);
 
@@ -37,6 +37,7 @@ title("C_L")
 xlabel("Base Size (m)")
 ylabel("C_L")
 grid on
+ylim([0.7, 0.95])
 
 subplot(2,1,2); 
 plot(baseVals/10000,ClCdDiff(:,2), 'LineWidth',1.5, 'Color','k')
@@ -47,7 +48,6 @@ grid on
 saveas(gcf,'plots/part2c_plots/CD_base','epsc')
 
 % xfoil plots
-figure
 xfoilData = readmatrix('../data/part1c_data/AG16_polar.csv');
 xfoilAlpha = xfoilData(6:end,1);
 xfoilCl = xfoilData(6:end,2);
