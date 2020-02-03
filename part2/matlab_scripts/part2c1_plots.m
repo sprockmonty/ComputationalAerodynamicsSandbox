@@ -52,8 +52,9 @@ saveas(gcf,'plots/partc_plots/dcp','epsc')
 
 function [cpUpper, cpLower] = clasifyPoints(cpX, cpZ)
     for i = 1:size(cpX,1)
-        index = find(cpX(i,2)==cpZ(:,2));
-        if cpZ(index,1) >= 0
+        %index = find(cpX(i,2)==cpZ(:,2));
+        %if cpZ(index,1) >= 0
+        if cpZ(i,1) >= 0
             cpX(i,3) = 1;
         else
             cpX(i,3) = -1;
