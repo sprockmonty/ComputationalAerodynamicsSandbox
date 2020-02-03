@@ -2,7 +2,7 @@ clear
 clc
 close all
 radiVals = [3,4,5,6,7,8,9,10,11,12,15,20,25,30,35,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,250];
-radiVals = [radiVals,230,250]
+radiVals = [radiVals,230,250];
 ClCd = zeros(length(radiVals),2);
 Cp = cell(length(radiVals),1);
 
@@ -46,5 +46,5 @@ title("C_L % Difference")
 xlabel("Domain Radius (m)")
 ylabel("% Difference")
 grid on
-saveas(gcf,'plots/part2b_plots/CD_radi','epsc')
+saveas(gcf,'plots/part2b_plots/CL_radi','epsc')
 
