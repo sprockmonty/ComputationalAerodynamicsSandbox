@@ -1,7 +1,7 @@
 clear
 clc
 close all
-load('../data/partc_data/expAndAvl.mat')
+load('../data/partc_data/expAndAvl08.mat')
 cpViscX = readmatrix('../data/partc_data/Cp_visc_fine_08_x');
 cpViscZ = readmatrix('../data/partc_data/Cp_visc_fine_08_z');
 cpInviscX = readmatrix('../data/partc_data/Cp_invisc_fine_08_x');
