@@ -37,7 +37,6 @@ title("C_L")
 xlabel("Base Size (m)")
 ylabel("C_L")
 grid on
-ylim([0.7, 0.95])
 
 subplot(2,1,2); 
 plot(baseVals/10000,ClCdDiff(:,2), 'LineWidth',1.5, 'Color','k')
@@ -45,7 +44,7 @@ title("C_L % Difference")
 xlabel("Base Size (m)")
 ylabel("% Difference")
 grid on
-saveas(gcf,'plots/part2c_plots/CD_base','epsc')
+saveas(gcf,'plots/part2c_plots/CL_base','epsc')
 
 % xfoil plots
 xfoilData = readmatrix('../data/part1c_data/AG16_polar.csv');
